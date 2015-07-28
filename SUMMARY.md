@@ -25,6 +25,7 @@
   * [用户设置](users.md)
 * [API文档](api/introduce.md)
   * [用户](api/users.md)
+  * [服务](api/services.md)
 * [CLI命令文档](cli/introduce.md)
     * [登陆](cli/login.md)
 * [应用推荐](app-rec/introduce.md)

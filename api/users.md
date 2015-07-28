@@ -34,3 +34,27 @@ Get the profile of a user
     "type": "cn"
 }
 ```
+
+## Generate API Token
+
+`POST /v1/generate-api-token/`
+
+Generate an API token that can be used to authenticate with API server.
+
+**Example Request** :
+```json
+{
+    "username": "madams",
+    "password": "a1b2c3d4"
+}
+```
+
+**Example Response** :
+```json
+{
+    "token": "4dfff64b6d2994a9567ac363149fb8692273e6b2"
+}​
+```
+
+In order for any request to be authenticated with API server, the returned token needs to be present in the HTTP header “Authorization” of the request with following format:
+`Authorization: Token <token>`
