@@ -1,9 +1,7 @@
-## Create Service
+## 创建服务
 `POST /v1/services/(namespace)`
 
-Create and start a new service.
-
-**Example Request**:
+**请求示例**:
 ```json
 {
     "service_name": "test",
@@ -62,18 +60,18 @@ Create and start a new service.
 }
 ```
 
-Query Parameters:
+参数:
 
-* **service_name**: - the name of the service. It must be unique among the services created by the requesting user.
-* **state**: - the state of the service.
+* **service_name**: - 服务名称，在每个用户创建的服务中必须唯一
+* **state**: - 服务状态
 
 
-## List services
+## 服务列表
 `GET /v1/services/(namespace)`
 
-List all services.
 
-**Example Request**:
+
+**返回示例**:
 ```json
 {
     "count": 2,
@@ -175,20 +173,20 @@ List all services.
 }
 ```
 
-Query Parameters:
+参数:
 
-* **unique_name**: - unique identifier for the service consisting of a series of names separated by slashes. Each name must be at least 1 character and may only contain digits (0-9), dashes (-), and lowercase letters (a-z). The name may not begin or end with a dash. The allowable format is represented by the following regular expression:
-  `^(([a-z0-9]|[a-z0-9][a-z0-9\-][a-z0-9])\.)([a-z0-9]|[a-z0-9][a-z0-9\-]*[a-z0-9])$`
+* **unique_name**: - 服务的唯一标示符。遵从如下的正则表达式规则:
+
+    `^(([a-z0-9]|[a-z0-9][a-z0-9\-][a-z0-9])\.)([a-z0-9]|[a-z0-9][a-z0-9\-]*[a-z0-9])$`
 
 
 
-## 服务信息
+## 获取服务信息
 
 `GET /v1/services/(namespace)/(service_name)/`
 
-获取关于某一个服务的详细信息
 
-**请求示例**:
+**返回示例**:
 ```json
 {
     "unique_name": "1cd688e2-b4eb-4bf8-9113-5caccdec2db6",
@@ -237,7 +235,7 @@ Query Parameters:
 ## 更新服务
 `PUT /v1/services/(namespace)/(service-name)/`
 
-更新某个服务的参数
+更新某个服务的参数，比如调整其实例个数
 
 **请求示例**:
 ```json
@@ -252,7 +250,6 @@ Query Parameters:
 ## 启动服务
 `PUT /v1/services/(namespace)/(service-name)/start/`
 
-启动服务
 
 ## 停止服务
 `PUT /v1/services/(namespace)/(service-name)/stop/`

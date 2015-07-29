@@ -1,4 +1,4 @@
-## 创建镜像源
+## 创建镜像仓库
 
 `POST /v1/repositories/(namespace)/`
 
@@ -28,9 +28,12 @@
 ```
 
 
-## 镜像源列表:
+## 镜像仓库列表:
 
 `GET /v1/repositories/(namespace)/`
+
+
+列出某个用户的所有镜像仓库
 
 **返回示例**:
 ```json
@@ -77,9 +80,10 @@
 }
 ```
 
-## 更新镜像源:
+## 更新镜像仓库:
 
 `PUT /v1/repositories/(namespace)/(repo-name)`
+
 
 **返回示例**:
 ```json
@@ -93,9 +97,11 @@
 }
 ```
 
-## 获取镜像源信息
+## 镜像仓库信息
 
 `GET /v1/repositories/(namespace)/(repo-name)`
+
+获取某个镜像仓库的详细信息
 
 **返回示例**:
 ```json
@@ -123,3 +129,26 @@
 ## Tags列表
 
 `GET /v1/repositories/(namespace)/(repo-name)/tags`
+
+获取某个镜像仓库的`Tags`列表
+
+**返回示例**:
+```json
+[
+    {
+        "image_id": "a4002247cb22e78c8d9ffeccdf7ea23d7763f53493d4d763cb4dbe58bf3566b5",
+        "tag": "test"
+    },
+    {
+        "image_id": "e72ac664f4f0c6a061ac4ef332557a70d69b0c62fb6add35f1c181ff7fff2287",
+        "tag": "latest"
+    }
+]
+```
+
+
+## 删除镜像源
+
+`DELETE /v1/repositories/(namespace)/(repo-name)/`
+
+
