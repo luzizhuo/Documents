@@ -182,3 +182,107 @@ Query Parameters:
 
 
 
+## 服务信息
+
+`GET /v1/services/(namespace)/(service_name)/`
+
+获取关于某一个服务的详细信息
+
+**请求示例**:
+```json
+{
+    "unique_name": "1cd688e2-b4eb-4bf8-9113-5caccdec2db6",
+    "service_name": "test",
+    "updated_at": "2015-04-14T09:46:39.457Z",
+    "target_state": "STARTED",
+    "instance_envvars": "{}",
+    "started_at": null,
+    "linked_to_apps": "{}",
+    "stopped_at": null,
+    "is_deploying": false,
+    "namespace": "madams",
+    "created_by": "madams",
+    "autoscaling_config": "{}",
+    "instance_ports": {},
+    "linked_to": "{}",
+    "run_command": "",
+    "custom_domain_name": "my-own-domain.cn",
+    "deployment_preference": "{}",
+    "scaling_mode": "MANUAL",
+    "image_name": "index.alauda.cn/alauda/ubuntu",
+    "linked_from_apps": "{}",
+    "target_num_instances": 1,
+    "last_autoscaled_at": null,
+    "current_num_instances": 1,
+    "linked_from": "{}",
+    "staged_num_instances": 0,
+    "started_num_instances": 1,
+    "instances": [
+        {
+            "instance_name": "test.0",
+            "started_at": "2015-04-14T09:49:56.141Z",
+            "uuid": "dcdaadc3-82a6-4ec1-9baa-58f35713626"
+        }
+    ],
+    "created_at": "2015-04-14T09:46:39.457Z",
+    "volumes": [],
+    "default_domain_name": "test-madams.alaudacn.me",
+    "image_tag": "latest",
+    "instance_size": "XS",
+    "resource_uri": "/api/v1/apps/test"
+}
+```
+
+
+## 更新服务
+`PUT /v1/services/(namespace)/(service-name)/`
+
+更新某个服务的参数
+
+**请求示例**:
+```json
+{
+    "service_name": "test",
+    "target_num_instances": 3,
+    "image_tag":"latest",
+    "scaling_mode": "MANUAL"
+}
+```
+
+## 启动服务
+`PUT /v1/services/(namespace)/(service-name)/start/`
+
+启动服务
+
+## 停止服务
+`PUT /v1/services/(namespace)/(service-name)/stop/`
+
+## 删除服务
+`DELETE /v1/services/(namespace)/(service-name)/`
+
+## 获取服务日志
+`GET /v1/services/(namespace)/(service-name)/logs/`
+
+**请求示例**:
+
+`/v1/services/madams/test/logs?start_time=1433753210&end_time=1433753270`
+
+
+**返回示例**:
+
+```json
+[
+    {
+        "instance_id": "a9aff249",
+        "message": "172.31.14.54 - - [12/May/2015 08:47:36] \"GET /alauda.jpg HTTP/1.1\" 200 -",
+        "time": 1433753256
+    },
+    {
+        "instance_id": "a9afcb38",
+        "message": "172.31.14.54 - - [12/May/2015 08:47:40] \"GET / HTTP/1.1\" 200 -",
+        "time": 1433753260
+    }
+]
+```
+
+

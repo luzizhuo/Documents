@@ -38,6 +38,8 @@
 * [API文档](api/introduce.md)
   * [用户](api/users.md)
   * [服务](api/services.md)
+  * [示例](api/instances.md)
+  * [镜像源](api/repository.md)
 * [CLI命令文档](cli/introduce.md)
     * [登陆](cli/login.md)
 * [应用推荐](apps/introduce.md)
