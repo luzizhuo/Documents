@@ -1,6 +1,6 @@
 ## 游戏
 
-### [xuyutom/2048](https://hub.alauda.cn/repos/xuyutom/2048)
+### [xuyutom > 2048](https://hub.alauda.cn/repos/xuyutom/2048)
 
 
 ![](../images/apps/games/2048.png)

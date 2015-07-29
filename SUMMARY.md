@@ -45,6 +45,7 @@
   * [登陆](cli/login.md)
 * [应用推荐](apps/introduce.md)
   * [网络](apps/network.md)
+  * [项目](apps/project.md)
   * [操作系统](apps/os.md)
   * [监控系统](apps/monitor.md)
   * [企业应用](apps/company.md)
