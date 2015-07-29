@@ -48,4 +48,5 @@
   * [操作系统](apps/os.md)
   * [监控系统](apps/monitor.md)
   * [企业应用](apps/company.md)
+  * [游戏](apps/games.md)
 * [常见问题](faq/introduce.md)
