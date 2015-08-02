@@ -2,7 +2,7 @@
 
 创建服务时可以对服务进行网络设置，包括“用户域名”和“端口映射”。下面将分别介绍：
 
-![](../photos/service/network-1.png)
+![](../../images/feature/service/network-1.png)
 
 ### 用户域名
 
@@ -22,25 +22,25 @@
 
 1. tcp-endpoint（External Load-balanced TCP Endpoint）
    是指这种服务地址可以被用户直接访问，alauda云平台为这个服务自动添加一个负载均衡器（Load Balancer），并且这种服务通过TCP的方式访问。 这种服务地址类型主要用于访问服务镜像里需要暴露出来的TCP端口。使用该类型创建的服务地址中的服务端口是随机分配的，一般是一个大于10000小于65535的整数。如下图，给一个ubuntu服务的22端口设置一个tcp-endpoint：
-   ![](../photos/service/network-2.png)
+   ![](../../images/feature/service/network-2.png)
    服务创建成功后，在服务详情页可以看到该服务的22端口可以通过ubuntu-alauda.myalauda.cn:10469和ubuntu-alauda.alaudacn.me:10469使用TCP协议访问。
-   ![](../photos/service/network-3.png)
+   ![](../../images/feature/service/network-3.png)
 2. http-endpoint（External Load-balanced HTTP Endpoint）
    是指这种服务地址可以被用户直接访问，alauda云平台为这个服务自动添加一个负载均衡器（Load Balancer），并且这种服务通过HTTP的方式访问。这种服务地址类型主要用于访问服务镜像里需要暴露出来的HTTP端口（如80端口以及某些镜像中的8080端口等）。使用该类型创建的服务地址中的服务端口是80。如下图，alauda官方镜像中得hello-world镜像暴露的就是80端口，当用户要创建一个hello-world服务的时候，alauda会自动添加一个http-endpoint类型的访问方式。
-   ![](../photos/service/network-4.png)
+   ![](../../images/feature/service/network-4.png)
    服务创建成功后，在服务详情页可以看到http-endpoint的服务地址是以链接的方式显示（如下图），用户可以直接点击链接访问服务。
-   ![](../photos/service/network-5.png)
+   ![](../../images/feature/service/network-5.png)
 3. direct-endpoint（External Direct TCP Endpoint）
    上面两个服务地址都是服务（Service）的服务地址，而direct-endpoint是服务中的实例（Instance）的服务地址。如果一个服务的一个端口设置了direct-endpoint类型，那么这个服务的每一个实例的该端口都会拥有一个可以外部访问的服务地址，这样用户就可以通过访问这个服务地址来访问指定的实例，每一个实例的服务地址可以在“容器实例”选项卡处看到。direct-endpoint中的服务端口都是随机生成的。
    如下图，创建alauda/hello-world的服务，并给该服务的80端口增加一个direct-endpoint类型：
-   ![](../photos/service/network-6.png)
+   ![](../../images/feature/service/network-6.png)
    那么在服务的详细信息页里，点击“容器实例”，查看到实例列表，如下图：
-   ![](../photos/service/network-7.png)
+   ![](../../images/feature/service/network-7.png)
    进入hello-world.0实例如下所示，就可以根据提供的URL和端口对这个实例进行访问。
-   ![](../photos/service/network-8.png)
+   ![](../../images/feature/service/network-8.png)
    如果一个服务只有一个实例，那么访问该服务的tcp-endpoint或http-endpoint地址和访问该实例的direct-endpoint地址的效果是一样的，都是访问这个唯一的实例。
 4. internal-endpoint（Internal Load-balanced TCP Endpoint）
    以上三种类型的服务地址都是可以被用户直接访问到的，而internal-endpoint只能在alauda云平台内部被访问。alauda云平台为这类服务的指定端口添加一个只能内部访问的负载均衡器（Load Balancer）以及一个内部域名，其格式为<servicename>-<username>.internal.myalauda.cn（见下图）。当有别的服务链接（link）这个服务时，链接服务就可以通过该内部域名访问这个被链接的服务，而其它服务或实例都无法访问这个地址。例如一个mysql的服务只设置了internal-endpoint，当用户创建一个web服务链接到mysql服务时，这个web服务就可以通过mysql-username.internal.alaudacn.me:service_port访问mysql，而该用户的其它服务或实例以及其它用户的所有服务和实例都无法访问这个mysql。
-   ![](../photos/service/network-9.png)
+   ![](../../images/feature/service/network-9.png)
  
 
