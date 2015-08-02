@@ -63,6 +63,17 @@
 参数:
 
 * **service_name**: - 服务名称，在每个用户创建的服务中必须唯一
+* **namespace**:
+* **run_command**:
+* **instance_size**:
+* **scaling_mode**:
+* **target_state**:
+* **custom_domain_name**:
+* **target_num_instances**:
+* **instance_envvars**:
+* **instance_ports**:
+* **autoscaling_config**:
+* **volumes**:
 * **state**: - 服务状态
 
 
@@ -175,9 +186,30 @@
 
 参数:
 
+* **count** 用户已经创建的服务的个数
+* **previous**
 * **unique_name**: - 服务的唯一标示符。遵从如下的正则表达式规则:
 
     `^(([a-z0-9]|[a-z0-9][a-z0-9\-][a-z0-9])\.)([a-z0-9]|[a-z0-9][a-z0-9\-]*[a-z0-9])$`
+
+* **updated_at**
+* **allocation_group**
+* **started_at**
+* **uuid**
+* **linked_to_apps**
+* **stopped_at**
+* **is_deploying**
+* **created_by**
+* **linked_to**
+* **deployment_preference**
+* **linked_from_apps**
+* **last_autoscaled_at*
+* **linked_from**
+* **staged_num_instances**
+* **started_num_instances**
+* **instances**
+* **default_domain_name**
+* **resource_uri**
 
 
 
@@ -282,4 +314,7 @@
 ]
 ```
 
+参数:
+- **message**
+- **time**
 

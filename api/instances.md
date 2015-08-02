@@ -19,7 +19,6 @@
 ]
 ```
 
-
 ## 实例信息
 
 `GET /v1/services/(namespace)/(service-name)/instances/(instance-uuid)/`
@@ -42,6 +41,7 @@
 获取某个实例的日志信息
 
 **请求示例**:
+
 `/v1/services/madams/test/instances/1cd688e2-b4eb-4bf8-9113-5caccdec2db6/logs?start_time=1433753210&end_time=1433753270`
 
 **返回示例**:
@@ -63,6 +63,7 @@
 获取某个实例的运行时信息
 
 **请求示例**:
+
 `/v1/services/madams/test/instances/a9afcb38-0db5-11e5-a6be-02416b28d26a/metircs?start_time=1433753087&end_time=1433753090&point_per_period=1m`
 
 参数:
@@ -128,3 +129,7 @@
 ```
 
 
+参数:
+
+- **columns**
+- **points**

@@ -33,6 +33,25 @@
 }
 ```
 
+
+参数:
+- **account_type**
+- **currency**
+- **invitation**
+- **is_available**
+- **is_trialuser**
+- **password_is_temp**
+- **is_active**
+- **industry**
+- **user_level**
+- **feature_flags**
+- **app_created**
+- **repo_created**
+- **api_revoked**
+- **type**
+
+
+
 ## 生成 API Token
 
 `POST /v1/generate-api-token/`
