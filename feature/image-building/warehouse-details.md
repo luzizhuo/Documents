@@ -1,7 +1,7 @@
 ## 构建镜像仓库详情
 构建镜像仓库信息与普通镜像仓库基本一致，但它有一些特有的属性和信息。
 
-![](../photos/image-building/details-1.png)
+![](../../images/feature/image-building/details-1.png)
 
 * 代码仓库: alaudacloud/debian (GitHub)表示该镜像仓库所关联代码仓库。
 * 修改构建配置：进入该构建仓库的配置页面，修改配置参数，具体参数详解在[镜像构建](http://docs.alauda.cn/?page_id=51)部分已经做了解释，在此就不再赘述。

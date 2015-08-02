@@ -1,6 +1,6 @@
 当您成功创建一个镜像仓库后，会自动跳转到镜像仓库详情界面。在这个界面可以显示出该镜像的详细信息：
 
-![](../photos/image-warehouse/details-1.png)
+![](../../images/feature/image-warehouse/details-1.png)
  
 
 

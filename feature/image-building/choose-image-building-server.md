@@ -9,4 +9,4 @@
 您在创建镜像构建仓库或之后修改构建配置时，均可指定镜像构建所使用的服务节点，如下图：
 
 
-![](../photos/image-building/choose-server.png)
+![](../../images/feature/image-building/choose-server.png)

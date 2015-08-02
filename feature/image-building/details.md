@@ -1,7 +1,7 @@
 ## 构建镜像详情
 通过点击构建镜像ID进入到构建镜像详情页面：
 
-![](../photos/image-building/details-2.png)
+![](../../images/feature/image-building/details-2.png)
 
 * 状态：构建有四种状态，成功、失败、等待和进行中；
 * 创建者：表示当前用户名；

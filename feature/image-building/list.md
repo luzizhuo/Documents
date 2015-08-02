@@ -1,7 +1,7 @@
 ## 构建镜像列表
 构建镜像列表展示出所有您构建的镜像以及所构建镜像的简略信息。
 
-![](../photos/image-building/list-1.png)
+![](../../images/feature/image-building/list-1.png)
 
 * 构建ID：您所构建的每个镜像系统都会为您分配一个ID，点击ID链接可以查看该镜像的详细信息。
 * 创建时间：开始创建镜像时的时间。
@@ -13,4 +13,4 @@
 * 创建者：即您的用户名。
 当您需要构建新的镜像时，点击右上角的“开始构建”按钮，选择您需要构建的镜像代码，点击“好“即可构建新的镜像。
 
-![](../photos/image-building/list-2.png)
+![](../../images/feature/image-building/list-2.png)

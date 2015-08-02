@@ -4,13 +4,13 @@
 
 要创建一个镜像仓库，首先要登录Alauda云平台，在菜单上找到镜像仓库，点击“创建镜像仓库”按钮，在下拉菜单中选中“镜像仓库”。
 
-![](../photos/image-warehouse/create-1.png)
+![](../../images/feature/image-warehouse/create-1.png)
 
 
 在“仓库名称（Repository Name）”输入“hello-world”（名称可自定义，但只能由小写字母、数字和“-”组成），选择该仓库是公有（public）还是私有（private），输入“简短描述（Short Description）”信息，由于简短描述仅仅可以输入100个字符，所以，如果简短描述不足以让您描述清楚您的仓库，那么请在“详细描述（Full Description）”中填写您仓库的具体信息。详细描述使用的是markdown格式，如果您想了解markdown的语法，请参考[这里](http://daringfireball.net/projects/markdown/syntax)。填写完所有的信息后，点击“创建（Create）”按钮，就可以创建一个新的镜像仓库了。
 
 
-![](../photos/image-warehouse/create-2.png)
+![](../../images/feature/image-warehouse/create-2.png)
 
 在web上创建成功镜像仓库后，接下来就需要push image操作了。在本地通过命令行，输入
 
