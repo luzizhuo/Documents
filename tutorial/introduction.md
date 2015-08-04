@@ -1,0 +1,16 @@
+# 入门教程
+
+欢迎大家使用灵雀云。在入门教程中，你会由浅入深地学习如何使用灵雀云平台，你也会发现通过灵雀云你可以方便的构建docker镜像、创建服务、以及与大家分享自己的镜像等各种方便、实用并且有趣的功能。我们的教程将按照以下章节帮助您更好的了解和学习灵雀云的大部分功能：
+
+* [第一章　初识灵雀云　注册账户](tutorial/register.md)
+* [第二章　创建服务如此简单　第一个Hello World服务](tutorial/hello-world.md)
+* [第三章　像用物理机一样　一个具有交互功能的ubuntu服务](tutorial/service-with-ssh.md)
+* [第四章　丰富的功能　服务的各种操作](tutorial/service.md)
+* [第五章　与外界通信　给服务配置端口和域名](tutorial/communication.md)
+* [第六章　加入自己的代码　开发与调试](tutorial/debug.md)
+* [第七章　管理镜像　镜像的基本操作](tutorial/repo.md)
+* [第八章　第一个属于自己的镜像　自动构建一个自己的镜像](tutorial/autobuild.md)
+* [第九章　一个真正的服务　使用灵雀云搭建wordpress博客网站](tutorial/a-real-service.md)
+* [第十章　不用担心数据丢失　如何备份数据](tutorial/backup.md)
+* [第十一章　打扮自己　为自己上传个性头像](tutorial/profile.md)
+* [第十二章　开启发现之旅](tutorial/explore.md)
