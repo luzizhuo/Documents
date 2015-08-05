@@ -1,4 +1,3 @@
-* [Docker入门](docker/introduce.md)
 * [灵雀云入门教程](tutorial/introduction.md)
   * [初识灵雀云　注册账户](tutorial/register.md)
   * [创建服务如此简单　第一个Hello World服务](tutorial/hello-world.md)
@@ -37,7 +36,7 @@
   * [镜像仓库](api/repository.md)
   * [存储卷备份](api/backup.md)
 * [CLI命令文档](cli/introduce.md)
-  * [登陆](cli/login.md)
+  * [登录](cli/login.md)
   * [服务](cli/service.md)
   * [实例](cli/instances.md)
   * [组合](cli/compose.md)
@@ -47,4 +46,3 @@
   * [问题](cli/errors.md)
 * [应用推荐](apps/introduce.md)
   * [2048](apps/2048.md)
-* [常见问题](faq/introduce.md)
