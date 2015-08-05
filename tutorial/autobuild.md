@@ -1,6 +1,6 @@
 # 第八章　第一个属于自己的镜像　从代码自动构建镜像
 
-在上一章，我们创建的镜像仓库虽然可以pull或push镜像，但这些都需要手动来操作。在实际中，更多的是我们希望能够从代码仓库中自动生成镜像，这样会更加方便实用。在本章您将学习灵雀云是如何为用户提供这个强大的功能的。
+在上一章，我们创建的镜像仓库虽然可以pull或push镜像，但这些都需要手工来操作。在实际中，我们更多的是希望能够从代码仓库中自动生成镜像，这样会更加方便实用。在本章，您将学习灵雀云是如何为用户提供这个强大的功能的。
 
 ## 创建代码仓库
 
@@ -8,12 +8,12 @@
 
 登录github，然后创建一个“tutorial-autobuild-myhello”代码仓库。接着打开本地的命令行窗口，为代码仓库添加以下内容：
 
-		git clone https://github.com/alaudacloud/tutorial-autobuild-myhello.git
-		cd tutorial-autobuild-myhello
-		touch server.js
-		touch Dockerfile
+	git clone https://github.com/alaudacloud/tutorial-autobuild-myhello.git
+	cd tutorial-autobuild-myhello
+	touch server.js
+	touch Dockerfile
 
-我们为这个代码仓库增加了两个文件：server.js和Dockerfile。其中server.js的内容是：
+我们为这个代码仓库增加了两个文件：“server.js”和“Dockerfile”。其中server.js的内容是：
 
 ```javascript
 var http = require("http");
@@ -27,7 +27,7 @@ http.createServer(function(request, response) {
 console.log("Server is running, listening on port 80....");
 ```
 
-这个代码和第六章的代码是一样的。而Dockerfile内容是：
+这个代码和[第六章](debug.md)的代码是一样的。而Dockerfile的内容是：
 
 ```
 FROM ubuntu:trusty
@@ -39,7 +39,7 @@ COPY server.js /
 CMD ["nodejs", "/server.js"]
 ```
 
-这是一个非常简单的dockerfile，其功能就是在容器中安装nodejs环境，并把上面的server.js代码运行起来，同时声明外部可以访问8080端口，下面我们提交代码：
+这是一个非常简单的dockerfile，其功能就是在容器中安装nodejs环境，并把上面的server.js代码运行起来，同时声明外部可以访问80端口，下面我们提交代码：
 
 		git add .
 		git commit -m "add my code"
@@ -49,7 +49,7 @@ CMD ["nodejs", "/server.js"]
 
 ## 创建镜像构建仓库
 
-有了代码仓库后，我们现在创建镜像构建仓库。镜像构建仓库本质上是一个镜像仓库，但是它里面的镜像不是通过用户手工推送(push)上来的，而是通过灵雀云的自动构建功能自动推送进来的，因此这种仓库不支持手工推送。
+有了代码仓库后，我们现在创建“镜像构建仓库”。镜像构建仓库本质上是一个镜像仓库，但是它里面的镜像不是通过用户手工推送(push)上来的，而是通过灵雀云的自动构建功能自动推送进来的，因此这种仓库不支持手工推送。
 
 点击控制台上方菜单“镜像仓库”进入镜像仓库列表，可以看到我们之前创建的“alaudadoc/hello”，点击右侧的“+创建镜像仓库”，选择“镜像构建仓库”。
 
@@ -59,9 +59,9 @@ CMD ["nodejs", "/server.js"]
 
 ![](../images/tutorial/autobuild-gitauth.png)
 
-授权通过后，您的代码git账号中的所有代码仓库都会在页面上列出来，选择“alaudacloud/tutorial-autobuild-myhello”，点击“选择”按钮进入配置页面。
+授权通过后，您的git账号中的所有代码仓库都会在页面上列出来，选择“alaudacloud/tutorial-autobuild-myhello”，点击“选择”按钮进入配置页面。
 
-在配置页面中，一些必要的参数已经填好了，我们只需要填写“简要描述”。对于本章的示例，我们还需要手工修改两个配置：“服务构建节点”请选择“中国”，“生成附加版本”请去掉勾选。然后点击创建。
+在配置页面中，一些必要的参数已经填好了，我们只需要填写“简要描述”。对于本章的示例，我们还需要手工修改一个配置：“服务构建节点”请选择“中国”。然后点击创建。
 
 ![](../images/tutorial/autobuild-create8.png)
 
@@ -97,7 +97,7 @@ http.createServer(function(request, response) {
 console.log("Server is running, listening on port 80....");
 ```
 
-提交后，我们点击控制台的“构建”菜单，可以看到有个新的构建正在运行，这个构建就是由于代码变化而重新产生新的镜像的过程。稍等几分钟后，更新过的镜像就构建完成了。
+提交后，我们点击控制台的“构建”菜单，可以看到有个新的构建正在运行，这个构建就是由于代码变化而系统自动产生的构建新的镜像的过程。稍等几分钟后，更新过的镜像就构建完成了。
 
 ![](../images/tutorial/autobuild-rebuild.png)
 

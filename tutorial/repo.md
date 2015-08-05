@@ -12,7 +12,7 @@
 
 ![](../images/tutorial/repo-create2.png)
 
-镜像仓库创建成功后，页面会显示“仓库操作指南”，这里有镜像仓库的基本命令行操作。使用方法和docker官方的docker hub使用方法是类似的。接下来，我们会一个个地学习。
+镜像仓库创建成功后，页面会显示“仓库操作指南”，这里有镜像仓库的基本命令行操作。使用方法和docker官方的docker hub是类似的。接下来，我们会一个个地学习。
 
 ![](../images/tutorial/repo-create3.png)
 
@@ -22,28 +22,28 @@
 
 在本机打开一个命令行窗口，首先登录镜像仓库源，方法和登录docker hub是一样，只是需要加上灵雀云的镜像仓库源地址“index.alauda.cn”
 
-		$ sudo docker login index.alauda.cn
+	$ sudo docker login index.alauda.cn
 
 * 从灵雀云拉取镜像
 
-现在我们从灵雀云上把第二章创建hello world服务使用的镜像拉取到本地：
+现在我们从灵雀云上把第二章创建“hello world”服务使用的镜像拉取到本地：
 
-		$ sudo docker pull index.alauda.cn/alauda/hello-world
+	$ sudo docker pull index.alauda.cn/alauda/hello-world
 
 * 推送镜像到灵雀云
 
-本地这时已经有了alauda/hello-world，我们将它命名为我们刚刚创建的镜像仓库的名称“alaudadoc/hello”，然后再推送到镜像仓库里。
+本地这时已经有了“alauda/hello-world”，我们将它命名为我们刚刚创建的镜像仓库的名称“alaudadoc/hello”，然后再推送到镜像仓库里。
 
-		$ sudo docker tag index.alauda.cn/alauda/hello-world index.alauda.cn/alaudadoc/hello:latest
-		$ sudo docker push index.alauda.cn/alaudadoc/hello:latest
+	$ sudo docker tag index.alauda.cn/alauda/hello-world index.alauda.cn/alaudadoc/hello:latest
+	$ sudo docker push index.alauda.cn/alaudadoc/hello:latest
 
 ## 浏览镜像仓库属性
 
-回到灵雀云的界面，选择“镜像仓库”菜单，在镜像仓库列表中点击刚刚创建的“hello”，进入到镜像仓库详细信息界面。点击下方的“版本”，在这里我们可以看到已经有了刚刚推送的latest版本。
+回到灵雀云的界面，选择“镜像仓库”菜单，在镜像仓库列表中点击刚刚创建的“hello”，进入到镜像仓库详细信息界面。点击下方的“版本”，在这里我们可以看到已经有了刚刚推送的“latest”版本。
 
 ![](../images/tutorial/repo-detail.png)
 
-我们还可以通过点击镜像仓库属性右侧的“创建服务”，直接创建该镜像的服务。也可以在创建服务选择镜像的时候，选择“我的镜像”页签，然后点击“选择”
+我们还可以通过点击镜像仓库属性右侧的“创建服务”，直接创建该镜像的服务。也可以在创建服务选择镜像的时候，选择“我的镜像”页签，然后点击“选择”，如下图：
 
 ![](../images/tutorial/repo-deploy.png)
 
@@ -55,8 +55,8 @@
 
 点击网站的上方的“镜像社区”，您可以看到提供搜索镜像的“搜索”功能，推荐镜像等各种信息，页面的最下方是灵雀云推荐给用户的几个镜像仓库：
 
-* alauda：灵雀云提供给用户的一些镜像，例如hello-world镜像
+* alauda：灵雀云提供给用户的一些镜像，如第二章使用的“alauda/hello-world”镜像
 * microsoft：微软提供的官方镜像
-* tutum：tutum提供的镜像，很多都可以通过默认配置创建服务，方便demo
+* tutum：tutum提供的镜像，很多都可以通过默认配置创建服务，方便学习和演示。
 * library：docker官方镜像，与docker hub上对应的docker镜像完全一样，是快速使用docker官方镜像的最佳替代镜像
 
