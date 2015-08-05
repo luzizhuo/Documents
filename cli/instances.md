@@ -6,7 +6,7 @@
 查看某一个实例的详细信息。
 
 
-```bash
+```
 Get details of a instance
 
 positional arguments:
@@ -28,7 +28,7 @@ optional arguments:
 
 
 
-```bash
+```
 usage: alauda service instance-logs [-h] [-s START_TIME] [-e END_TIME]
                                     [-n NAMESPACE]
                                     name id

@@ -6,7 +6,7 @@ Login命令是用于登录灵雀云美国区或者中国区系统。
 `cn`为中国区，`io`为美国区。
 当然，你也可以使用`-e`参数来显示的指明需要登陆的地址，例如:`https://api.alauda.io/v1/`
 
-```bash
+```
 usage: alauda login [-h] [-u USERNAME] [-p PASSWORD] [-c {cn,io}]
                     [-e ENDPOINT]
 
@@ -23,7 +23,7 @@ optional arguments:
 
 样例：
 
-```bash
+```
 bash-3.2# alauda login -c cn -u test -p test
 [alauda] Successfully logged in as test.
 [alauda] OK
@@ -38,7 +38,7 @@ bash-3.2# alauda login -e https://api.alauda.io/v1/ -u test -p test
 
 退出登录
 
-```bash
+```
 usage: alauda logout [-h]
 
 Log out
@@ -49,7 +49,7 @@ optional arguments:
 
 
 示例：
-```bash
+```
 bash-3.2# alauda logout
 [alauda] Bye
 [alauda] OK

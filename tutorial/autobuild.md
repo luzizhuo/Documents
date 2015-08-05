@@ -15,25 +15,29 @@
 
 我们为这个代码仓库增加了两个文件：server.js和Dockerfile。其中server.js的内容是：
 
-		var http = require("http");
-		var os = require("os");
-		http.createServer(function(request, response) {
-		    console.log("New request arrived.");
-		    response.writeHead(200, {"Content-Type": "text/plain"});
-		    response.write("Hi, you are visiting " + os.hostname() + "\n");
-		    response.end();
-		}).listen(80);
-		console.log("Server is running, listening on port 80....");
+```javascript
+var http = require("http");
+var os = require("os");
+http.createServer(function(request, response) {
+	console.log("New request arrived.");
+	response.writeHead(200, {"Content-Type": "text/plain"});
+	response.write("Hi, you are visiting " + os.hostname() + "\n");
+	response.end();
+}).listen(80);
+console.log("Server is running, listening on port 80....");
+```
 
 这个代码和第六章的代码是一样的。而Dockerfile内容是：
 
-		FROM ubuntu:trusty
-		MAINTAINER alaudadoc alaudadoc@alauda.cn
+```
+FROM ubuntu:trusty
+MAINTAINER alaudadoc alaudadoc@alauda.cn
 
-		RUN apt-get update && apt-get install -y nodejs
-		EXPOSE 80
-		COPY server.js /
-		CMD ["nodejs", "/server.js"]
+RUN apt-get update && apt-get install -y nodejs
+EXPOSE 80
+COPY server.js /
+CMD ["nodejs", "/server.js"]
+```
 
 这是一个非常简单的dockerfile，其功能就是在容器中安装nodejs环境，并把上面的server.js代码运行起来，同时声明外部可以访问8080端口，下面我们提交代码：
 
@@ -81,15 +85,17 @@
 
 接下来我们修改一下server.js，将内容改为：
 
-		var http = require("http");
-		var os = require("os");
-		http.createServer(function(request, response) {
-		    console.log("New request arrived.");
-		    response.writeHead(200, {"Content-Type": "text/plain"});
-		    response.write("Welcome to my website! you are visiting " + os.hostname() + "\n");
-		    response.end();
-		}).listen(80);
-		console.log("Server is running, listening on port 80....");
+```javascript
+var http = require("http");
+var os = require("os");
+http.createServer(function(request, response) {
+	console.log("New request arrived.");
+	response.writeHead(200, {"Content-Type": "text/plain"});
+	response.write("Welcome to my website! you are visiting " + os.hostname() + "\n");
+	response.end();
+}).listen(80);
+console.log("Server is running, listening on port 80....");
+```
 
 提交后，我们点击控制台的“构建”菜单，可以看到有个新的构建正在运行，这个构建就是由于代码变化而重新产生新的镜像的过程。稍等几分钟后，更新过的镜像就构建完成了。
 

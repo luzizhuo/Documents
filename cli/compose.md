@@ -1,6 +1,6 @@
 ## compose
 
-```bash
+```
 usage: alauda compose [-h] {up,ps,start,stop,restart,rm,scale} ...
 
 Compose multi-container app
@@ -24,7 +24,7 @@ Alauda compose commands:
 
 示例:
 
-```bash
+```
 bash-3.2# alauda compose up -f gitlab.alauda.yml
 [alauda] Creating and starting service "postgresql"
 [alauda] Creating and starting service "redis"
@@ -104,7 +104,7 @@ DB_HOST的值就是当前服务中的环境变量POSTGRESQL_PORT_5432_TCP_ADDR�
 
 启动包含多个服务的应用。
 
-```bash
+```
 usage: alauda compose up [-h] [-f FILE] [-s]
 
 Create and start all service containers
@@ -122,7 +122,7 @@ optional arguments:
 ### ps
 列出应用的各个服务信息。
 
-```bash
+```
 usage: alauda compose ps [-h] [-f FILE]
 
 Lists container
@@ -137,7 +137,7 @@ optional arguments:
 
 启动已经停止的应用。
 
-```bash
+```
 usage: alauda compose start [-h] [-f FILE] [-s]
 
 Start all service containers
@@ -157,7 +157,7 @@ optional arguments:
 暂停运行中的应用。
 
 
-```bash
+```
 usage: alauda compose stop [-h] [-f FILE]
 
 Stop all service containers
@@ -172,7 +172,7 @@ optional arguments:
 
 重新启动应用。
 
-```bash
+```
 usage: alauda compose restart [-h] [-f FILE] [-s]
 
 Restart all service containers
@@ -187,7 +187,7 @@ optional arguments:
 ### rm
 删除应用。
 
-```bash
+```
 sage: alauda compose rm [-h] [-f FILE]
 
 Remove all service containers
@@ -203,7 +203,7 @@ optional arguments:
 调节应用中每个服务的实例数量。
 
 
-```bash
+```
 usage: alauda compose scale [-h] [-f FILE] [descriptor [descriptor ...]]
 
 Set number of containers to run for a service

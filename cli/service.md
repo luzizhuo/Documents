@@ -1,7 +1,7 @@
 ## 服务
 
 
-```bash
+```
 usage: alauda service [-h]
 
                       {create,run,inspect,start,stop,rm,ps,scale,enable-autoscaling,disable-autoscaling,logs,instances,instance,instance-logs,instance-metrics}
@@ -33,7 +33,7 @@ Alauda service commands:
 
 示例:
 
-```bash
+```
 bash-3.2# alauda run hello index.alauda.cn/alauda/hello-world:latest -p 80
 [alauda] Creating and starting service "hello"
 [alauda] OK
@@ -46,7 +46,7 @@ bash-3.2# alauda run hello index.alauda.cn/alauda/hello-world:latest -p 80
 用于创建一个服务(只创建，不运行)。并通过参数指明服务的名称，所用镜像名称，以及服
 务所需容器大小，容器数量等信息。
 
-```bash
+```
 usage: alauda service create [-h] [-t TARGET_NUM_INSTANCES] [-s {XS,S,M,L,XL}]
                              [-r RUN_COMMAND] [-e ENV] [-l LINK] [-p PUBLISH]
                              [-ex EXPOSE] [-v VOLUME] [-n NAMESPACE] [-a]
@@ -89,7 +89,7 @@ optional arguments:
 大小，容器数量等信息。
 
 
-```bash
+```
 usage: alauda service run [-h] [-t TARGET_NUM_INSTANCES] [-s {XS,S,M,L,XL}]
                           [-r RUN_COMMAND] [-e ENV] [-l LINK] [-p PUBLISH]
                           [-ex EXPOSE] [-v VOLUME] [-n NAMESPACE] [-a]
@@ -124,7 +124,7 @@ optional arguments:
 获取一个服务的详细信息。
 
 
-```bash
+```
 usage: alauda service inspect [-h] [-n NAMESPACE] name
 
 Get details of a service
@@ -147,7 +147,7 @@ optional arguments:
 启动处于暂停状态的服务。
 
 
-```bash
+```
 usage: alauda service start [-h] [-n NAMESPACE] name
 
 Start a service
@@ -165,7 +165,7 @@ optional arguments:
 ### stop
 暂停处于运行状态的服务。
 
-```bash
+```
 usage: alauda service stop [-h] [-n NAMESPACE] name
 
 Stop a service
@@ -183,7 +183,7 @@ optional arguments:
 删除已存在的服务。
 
 
-```bash
+```
 usage: alauda service rm [-h] [-n NAMESPACE] name
 
 Remove a service
@@ -202,7 +202,7 @@ optional arguments:
 列出当前账户下所有的服务。
 
 
-```bash
+```
 usage: alauda service ps [-h] [-n NAMESPACE]
 
 List services
@@ -219,7 +219,7 @@ optional arguments:
 
 
 
-```bash
+```
 
 usage: alauda service scale [-h] [-n NAMESPACE] [descriptor [descriptor ...]]
 
@@ -238,7 +238,7 @@ optional arguments:
 
 将当前服务的状态设置为自动调节模式。
 
-```bash
+```
 usage: alauda service enable-autoscaling [-h] [-n NAMESPACE]
                                          [-f AUTOSCALING_CONFIG]
                                          name
@@ -262,7 +262,7 @@ optional arguments:
 将当前服务的状态设置为手动调节模式。
 
 
-```bash
+```
 usage: alauda service disable-autoscaling [-h] [-n NAMESPACE]
                                           [-t TARGET_NUM_INSTANCES]
                                           name
@@ -286,7 +286,7 @@ optional arguments:
 查看当前服务的日志信息
 
 
-```bash
+```
 usage: alauda service logs [-h] [-n NAMESPACE] [-s START_TIME] [-e END_TIME]
                            name
 

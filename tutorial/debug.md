@@ -4,21 +4,26 @@
 
 为了演示方便，我们先将上一章创建的myubuntu的容器实例数量改为“1”。然后登录这个服务，并输入下列命令安装我们需要的软件环境：
 
-		# apt-get update
-		# apt-get install -y nodejs curl		
+        # apt-get update
+        # apt-get install -y nodejs curl		
 
 然后我们使用vi创建一个server.js的文件，内容如下：
 
-		var http = require("http");
-		var os = require("os");
-		http.createServer(function(request, response) {
-		    console.log("New request arrived.");
-		    response.writeHead(200, {"Content-Type": "text/plain"});
-		    response.write("Hi, you are visiting " + os.hostname() + "\n");
-		    response.end();
-		}).listen(8080);
-		console.log("Server is running, listening on port 8080....");
+```javascript
+var http = require("http");
+var os = require("os");
+http.createServer(function(request, response) {
+	console.log("New request arrived.");
+	response.writeHead(200, {"Content-Type": "text/plain"});
+	response.write("Hi, you are visiting " + os.hostname() + "\n");
+	response.end();
+}).listen(8080);
+console.log("Server is running, listening on port 8080....");
 
+```
+
+
+	
 保存文件，并退出vi回到命令行，然后运行我们的程序：
 
 		# nodejs server.js
@@ -52,6 +57,6 @@
 
 * 为什么我在ubuntu容器里不能使用vim等命令？
 
-tutum/ubuntu的镜像只包含最基本的ubuntu环境，很多命令都需要用户自己安装，所以如果您想使用vim，请先通过apt-get install来安装vim。
+  tutum/ubuntu的镜像只包含最基本的ubuntu环境，很多命令都需要用户自己安装，所以如果您想使用vim，请先通过apt-get install来安装vim。
 
 

@@ -1,6 +1,6 @@
 ### backup
 
-```bash
+```
 usage: alauda backup [-h] {create,list,inspect,rm} ...
 
 Backup operations
@@ -22,7 +22,7 @@ Alauda backup commands:
 
 示例:
 
-```bash
+```
 bash-3.2# alauda backup create backup1 redis /data
 [alauda] Creating backup "backup1"
 [alauda] OK
@@ -33,7 +33,7 @@ bash-3.2# alauda backup create backup1 redis /data
 创建备份。
 
 
-```bash
+```
 usage: alauda backup create [-h] [-n NAMESPACE] name service dir
 
 Create a new volume backup
@@ -56,7 +56,7 @@ optional arguments:
 
 列出当前所有备份。
 
-```bash
+```
 usage: alauda backup list [-h] [-n NAMESPACE]
 
 list volume backups
@@ -72,7 +72,7 @@ optional arguments:
 获取某个备份的详细信息。
 
 
-```bash
+```
 usage: alauda backup inspect [-h] [-n NAMESPACE] id
 
 Get details of a volume backup
@@ -96,7 +96,7 @@ id 为用户创建每个备份之后所获取的唯一id。
 
 删除备份。
 
-```bash
+```
 usage: alauda backup rm [-h] [-n NAMESPACE] id
 
 Remove a volume backup
