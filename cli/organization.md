@@ -1,6 +1,6 @@
 ## organization
 
-```bash
+```
 usage: alauda organization [-h] {list,create,inspect,update} ...
 
 Organization operations
@@ -22,7 +22,7 @@ Alauda organization commands:
 
 样例:
 
-```bash
+```
 bash-3.2# alauda organization list
      Name           Company              Created time
 -----------------------------------------------------------
@@ -37,7 +37,7 @@ xdzhangcnorg1    mathilde2         2015-05-25T07:38:07.670Z
 ### create
 创建组织。
 
-```bash
+```
 usage: alauda organization create [-h] name company
 
 Create a new organization
@@ -61,7 +61,7 @@ optional arguments:
 获取某个组织的详细信息。
 
 
-```bash
+```
 usage: alauda organization inspect [-h] name
 
 Get details of an organization
@@ -79,7 +79,7 @@ optional arguments:
 
 
 
-```bash
+```
 usage: alauda organization update [-h] name company
 
 Update an exist orgnization

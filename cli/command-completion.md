@@ -19,7 +19,7 @@ alauda c之后，单机Tab键，即可得到补全后的命令alauda compose
 
 首先需要安装 bash-completion
 
-```bash
+```
 $ brew install bash-completion
 $ brew tap homebrew/completions
 ```

@@ -14,7 +14,7 @@
 ## 使用
 `alauda` 或 `alauda -h`:
 
-```bash
+```
 bash-3.2# alauda
 usage: alauda [-h] [-v] {login,logout,service,compose,backup,organization} ...
 
@@ -37,7 +37,7 @@ Alauda CLI commands:
 
 使用 `-v` 来查看当前 alauda CLI的版本:
 
-```bash
+```
 bash-3.2# alauda -v
 alauda 0.1.0
 ```
@@ -60,7 +60,7 @@ alauda 0.1.0
 显示任何支持命令的帮助信息，只需要在命令后面增加参数`-h`
 
 
-```bash
+```
 bash-3.2# alauda service create -h
 usage: alauda service create [-h] [-t TARGET_NUM_INSTANCES] [-s {XS,S,M,L,XL}]
                              [-r RUN_COMMAND] [-e ENV] [-l LINK] [-p PUBLISH]
