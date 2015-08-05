@@ -9,8 +9,10 @@
 * [第五章　与外界通信　给服务配置端口和域名](tutorial/communication.md)
 * [第六章　加入自己的代码　开发与调试](tutorial/debug.md)
 * [第七章　管理镜像　镜像的基本操作](tutorial/repo.md)
-* [第八章　第一个属于自己的镜像　自动构建一个自己的镜像](tutorial/autobuild.md)
+<!--
+* [第八章　第一个属于自己的镜像　从代码自动构建镜像](tutorial/autobuild.md)
 * [第九章　一个真正的服务　使用灵雀云搭建wordpress博客网站](tutorial/a-real-service.md)
 * [第十章　不用担心数据丢失　如何备份数据](tutorial/backup.md)
-* [第十一章　打扮自己　为自己上传个性头像](tutorial/profile.md)
+* [第十一章　打扮自己　上传个性头像](tutorial/profile.md)
 * [第十二章　开启发现之旅](tutorial/explore.md)
+-->

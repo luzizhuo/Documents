@@ -51,6 +51,7 @@
 ### 常见问题
 
 * 为什么我在ubuntu容器里不能使用vim等命令？
-  tutum/ubuntu的镜像只包含最基本的ubuntu环境，很多命令都需要用户自己安装，所以如果您想使用vim，请先通过apt-get install来安装vim。
+
+tutum/ubuntu的镜像只包含最基本的ubuntu环境，很多命令都需要用户自己安装，所以如果您想使用vim，请先通过apt-get install来安装vim。
 
 
