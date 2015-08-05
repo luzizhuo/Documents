@@ -131,5 +131,5 @@
 
 参数:
 
-- **columns**
-- **points**
+- **columns** 返回的每一个point所的对应的值的含义
+- **points** 数据集合

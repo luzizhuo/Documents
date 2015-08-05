@@ -17,7 +17,7 @@
        * [镜像仓库详情](feature/image-warehouse/details.md)
    * [镜像构建](feature/image-building/introduce.md)
        * [如何创建镜像构建仓库](feature/image-building/create.md)
-       * [如何选择镜像构建服务节点](faeture/image-building/choose-image-building-server.md)
+       * [如何选择镜像构建服务节点](feature/image-building/choose-image-building-server.md)
        * [构建镜像仓库详情](feature/image-building/warehouse-details.md)
        * [构建镜像列表](feature/image-building/list.md)
        * [构建镜像详情](feature/image-building/details.md)

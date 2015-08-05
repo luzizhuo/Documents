@@ -1,10 +1,10 @@
-## 网络设置
+# 网络设置
 
 创建服务时可以对服务进行网络设置，包括“用户域名”和“端口映射”。下面将分别介绍：
 
 ![](../../images/feature/service/network-1.png)
 
-### 用户域名
+## 用户域名
 
 服务被创建后，默认情况下，alauda云平台会自动为该服务生成一个域名：<servicename>-<username>.alaudacn.me。用户可以通过该域名来访问该服务。但是用户也可以为自己的服务设置一个自定义的域名，并且使用这个自定义的域名来访问服务。
 
@@ -12,7 +12,7 @@
 
 例如，用户tom使用镜像alauda/hello-world创建了一个名为hello的服务，系统给该服务默认生成的域名是hello-world-tom.alaudacn.me。假设用户在某个域名服务商处申请了一个www.tom.cn的域名，并希望可以通过www.tom.cn访问这个hello服务。那么可以在“用户域名”处填入“www.tom.cn”。同时在域名服务商处给www.tom.cn添加一个指向hello-world-tom.myalauda.cn的CNAME记录。这样无论是访问`http://www.tom.cn` 还是访问 `http://hello-world-tom.alaudacn.me`， 都能够访问到这个hello-world服务。
 
-### 端口映射和服务地址
+## 端口映射和服务地址
 
 一个服务可以暴露多个端口，在alauda平台上启动服务的时候，会为每一个需要暴露的端口映射出一个可以供用户访问的服务端口（Service Port），用户可以通过服务的域名以及服务端口来访问该服务。域名加端口就是一个服务地址（Endpoint）。目前对于同一个端口，最多有四种映射方式，因此最多有四种类型的服务地址，他们分别是：tcp-endpoint、http-endpoint、direct-endpoint和internal-endpoint。一个服务的每个端口可以设置这四种类型中的任意一种或者多种。
 

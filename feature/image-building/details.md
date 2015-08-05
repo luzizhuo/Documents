@@ -1,4 +1,4 @@
-## 构建镜像详情
+# 构建镜像详情
 通过点击构建镜像ID进入到构建镜像详情页面：
 
 ![](../../images/feature/image-building/details-2.png)

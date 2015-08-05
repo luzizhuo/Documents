@@ -62,19 +62,21 @@
 
 参数:
 
-* **service_name**: - 服务名称，在每个用户创建的服务中必须唯一
-* **namespace**:
-* **run_command**:
-* **instance_size**:
-* **scaling_mode**:
-* **target_state**:
-* **custom_domain_name**:
-* **target_num_instances**:
-* **instance_envvars**:
-* **instance_ports**:
-* **autoscaling_config**:
-* **volumes**:
-* **state**: - 服务状态
+* **service_name**: - 服务名称，在每个用户创建的服务中必须唯一。后面某些API中的app_name和这个是一个含义。
+* **namespace**: 服务所属用户名或机构名
+* **run_command**: 运行docker时执行的命令
+* **image_name** 服务使用的镜像
+* **image_tag** 服务使用的镜像版本
+* **instance_size**: 容器实例大小，可选项为：“XS”，“S”，“M”，“L”，“XL”
+* **scaling_mode**: 调节模式，只对无状态服务有效。可选项为：“MANUAL”，“AUTO”
+* **target_state**: 服务创建后的目标状态，可选项为：“STARTED”，“STOPPED”
+* **custom_domain_name**: 用户自定义的域名，目前能设置一个域名，如“www.myname.com”
+* **linked_to_apps** 该服务要连接的其它服务
+* **target_num_instances**: 服务的实例数量
+* **instance_envvars**: 环境变量
+* **instance_ports**: 端口设置
+* **autoscaling_config**: 当选择自动调节模式时的参数配置
+* **volumes**: 存储卷
 
 
 ## 服务列表
@@ -186,30 +188,20 @@
 
 参数:
 
-* **count** 用户已经创建的服务的个数
+* **count** 用户已经创建的服务个数
 * **previous**
 * **unique_name**: - 服务的唯一标示符。遵从如下的正则表达式规则:
 
     `^(([a-z0-9]|[a-z0-9][a-z0-9\-][a-z0-9])\.)([a-z0-9]|[a-z0-9][a-z0-9\-]*[a-z0-9])$`
 
-* **updated_at**
-* **allocation_group**
-* **started_at**
-* **uuid**
-* **linked_to_apps**
-* **stopped_at**
-* **is_deploying**
-* **created_by**
-* **linked_to**
-* **deployment_preference**
-* **linked_from_apps**
-* **last_autoscaled_at*
-* **linked_from**
-* **staged_num_instances**
-* **started_num_instances**
-* **instances**
-* **default_domain_name**
-* **resource_uri**
+* **updated_at** 最后更新时间
+* **allocation_group** 专属VM标记
+* **started_at** 启动时间
+* **stopped_at** 停止时间
+* **is_deploying** 是否正在部署中
+* **namespace** 服务所属用户名或机构名
+* **created_by** 创建者
+
 
 
 
@@ -282,7 +274,6 @@
 ## 启动服务
 `PUT /v1/services/(namespace)/(service-name)/start/`
 
-
 ## 停止服务
 `PUT /v1/services/(namespace)/(service-name)/stop/`
 
@@ -315,6 +306,8 @@
 ```
 
 参数:
-- **message**
-- **time**
+- **start_time** **end_time** 时间戳
+- **instance_id** 产生日志的容器实例id
+- **message** 日志内容
+- **time** 日志创建的时间
 

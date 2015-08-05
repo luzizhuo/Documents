@@ -1,4 +1,4 @@
-## Docker镜像和镜像仓库源
+# Docker镜像和镜像仓库源
 
 Docker镜像是Docker容器启动时所用的只读模版文件，它是一个静态的独立运行环境，包含了应用程序本身以及它所需要的全部依赖软件层。通常，镜像是在一个基础镜像（如ubuntu）上运行一系列指令而生成的。这些指令可能包括运行一个命令，增加一个文件或文件夹，创建一个环境变量，运行某个进程等。包含基础镜像名称和这些指令的文件叫做Dockerfile。您可以通过docker build命令将一个Dockerfile构建出一个Docker镜像。
 
@@ -6,7 +6,7 @@ Docker镜像是Docker容器启动时所用的只读模版文件，它是一个�
 
  
 
-## Alauda.cn 镜像仓库源
+# Alauda.cn 镜像仓库源
 
 Alauda.cn镜像仓库源为您提供公有（public）和私有（private）的镜像存储服务。您可以使用我们的控制台创建公有或私有的镜像仓库（public/private repository），并使用Docker客户端来推送您的镜像到该镜像仓库。
 

@@ -13,6 +13,10 @@
 ```
 
 参数:
+- **repo_name** 镜像仓库名称
+- **namespace** 镜像仓库所属的用户名或机构名
+- **is_public** 镜像仓库是否为公共的
+- **description** 镜像仓库描述
 
 
 
@@ -34,7 +38,7 @@
 
 参数:
 
-- **is_automated**
+- **is_automated** 是否镜像构建仓库
 
 
 
