@@ -51,12 +51,3 @@ console.log("Server is running, listening on port 8080....");
 这样，一个包含有我们自己程序的服务就已经运行起来了。由于在上一章，我们已经将8080端口映射为一个http-endpoint，即80端口，于是你可以在浏览器访问：`http://myubuntu-alaudadoc.myalauda.cn/`，同时如果上一章你的“用户域名”设置的正确的话，那么你就可以通过`http://www.alauda.co/`来访问你的服务了。
 
 ![](../images/tutorial/debug-visit2.png)
-
-
-### 常见问题
-
-* 为什么我在ubuntu容器里不能使用vim等命令？
-
-  tutum/ubuntu的镜像只包含最基本的ubuntu环境，很多命令都需要用户自己安装，所以如果您想使用vim，请先通过apt-get install来安装vim。
-
-

@@ -27,11 +27,3 @@
 ![](../images/tutorial/ssh-visit3.png)
 
 在这个ubuntu容器里，您可以使用ls、pwd、apt-get等ubuntu命令，和你在一台装有ubuntu 14.04的物理机上使用ubuntu是完全一样的。
-
-
-### 常见问题
-
-* 为什么我访问不了我创建的ubuntu服务？
-
-* 为什么登录ubuntu时，提示我输入密码，但是我输入了随机密码后会提示我密码不对？
-
