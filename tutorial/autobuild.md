@@ -22,8 +22,8 @@
 		    response.writeHead(200, {"Content-Type": "text/plain"});
 		    response.write("Hi, you are visiting " + os.hostname() + "\n");
 		    response.end();
-		}).listen(8080);
-		console.log("Server is running, listening on port 8080....");
+		}).listen(80);
+		console.log("Server is running, listening on port 80....");
 
 这个代码和第六章的代码是一样的。而Dockerfile内容是：
 
@@ -31,7 +31,7 @@
 		MAINTAINER alaudadoc alaudadoc@alauda.cn
 
 		RUN apt-get update && apt-get install -y nodejs
-		EXPOSE 8080
+		EXPOSE 80
 		COPY server.js /
 		CMD ["nodejs", "/server.js"]
 
@@ -61,4 +61,46 @@
 
 ![](../images/tutorial/autobuild-create8.png)
 
-创建完成后
+创建完成后，我们可以看到镜像构建仓库的详细信息页。进入到“构建”标签页，点击“开始构建”。
+
+![](../images/tutorial/autobuild-build1.png)
+
+下方出现本次构建的信息，点击“构建ID”，可以查看本次构建的更多信息，以及构建日志。
+
+![](../images/tutorial/autobuild-build3.png)
+
+构建成功后，镜像仓库“alaudacloud/tutorial-autobuild-myhello”里将会多一个“latest”镜像版本和一个类似“v20150805.025327”的版本号，表示镜像已经构建成功，并且可以在创建服务的时候使用了。
+
+## 使用自动构建的镜像部署服务
+
+我们现在创建一个新的服务，使用刚刚构建成功的含有我们代码的镜像。在刚才镜像仓库详细信息页面上找到“创建服务”的链接，点击，输入我们要创建的服务名称“myhello”，点击“创建”按钮。服务创建成功后，点击服务地址，就能够访问到我们的代码所提供的服务了。
+
+![](../images/tutorial/autobuild-visit.png)
+
+## 自动构建
+
+接下来我们修改一下server.js，将内容改为：
+
+		var http = require("http");
+		var os = require("os");
+		http.createServer(function(request, response) {
+		    console.log("New request arrived.");
+		    response.writeHead(200, {"Content-Type": "text/plain"});
+		    response.write("Welcome to my website! you are visiting " + os.hostname() + "\n");
+		    response.end();
+		}).listen(80);
+		console.log("Server is running, listening on port 80....");
+
+提交后，我们点击控制台的“构建”菜单，可以看到有个新的构建正在运行，这个构建就是由于代码变化而重新产生新的镜像的过程。稍等几分钟后，更新过的镜像就构建完成了。
+
+![](../images/tutorial/autobuild-rebuild.png)
+
+## 升级服务
+
+刚才我们对代码进行了修改，现在需要把刚才创建的myhello服务升级到最新的版本。点击控制台的“服务”菜单，选择myhello服务进入到详细信息页面。在“停止”按钮旁边有一个“更新”按钮。点击该按钮。
+
+![](../images/tutorial/autobuild-redeploy.png)
+
+现在我们选择新的“镜像版本”（注意，不能选latest）。然后点击“更新”按钮，稍等一会儿服务开始重新部署。直到部署成功后，我们再次点击服务地址，就会看到弹出的页面返回的欢迎信息和之前不一样了，服务已经完成了更新。
+
+![](../images/tutorial/autobuild-revisit.png)

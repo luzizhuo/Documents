@@ -9,6 +9,7 @@
    * [与外界通信　给服务配置端口和域名](tutorial/communication.md)
    * [加入自己的代码　开发与调试](tutorial/debug.md)
    * [管理镜像　镜像的基本操作](tutorial/repo.md)
+   * [第一个属于自己的镜像　从代码自动构建镜像](tutorial/autobuild.md)
 * [产品功能](feature/introduce.md)
    * [镜像仓库](feature/image-warehouse/introduce.md)
        * [如何创建镜像仓库](feature/image-warehouse/create.md)
