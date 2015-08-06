@@ -51,4 +51,5 @@
    * [问题](cli/errors.md)
 * [应用推荐](apps/introduce.md)
    * [2048](apps/2048.md)
+* [常见问题](faq/introduction.md)
 
