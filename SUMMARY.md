@@ -10,7 +10,7 @@
    * [开发与调试](tutorial/debug.md)
    * [镜像的基本操作](tutorial/repo.md)
    * [从代码自动构建镜像](tutorial/autobuild.md)
-   * [更多技巧](tutorial/techniques.md)
+* [灵雀云使用技巧](techniques.md)
 * [产品功能](feature/introduce.md)
    * [镜像仓库](feature/image-warehouse/introduce.md)
        * [如何创建镜像仓库](feature/image-warehouse/create.md)
