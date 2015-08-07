@@ -7,7 +7,9 @@
 
 
 ```
-Get details of a instance
+usage: alauda service instance [-h] [-n NAMESPACE] name id
+
+Get details of an instance
 
 positional arguments:
   name                  Service name
