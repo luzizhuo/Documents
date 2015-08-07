@@ -16,8 +16,6 @@
 
 * [使用AlaudaCloud的Tomcat镜像服务](http://www.alauda.cn/2015/04/28/tomcat)
 
-* [用Wordpress轻松搭建您的网站](http://www.alauda.cn/2015/03/25/wordpress-2/)
-
 * [博客Docker化？用WordPress](http://www.alauda.cn/2015/07/20/wordpress/)
 
 * [打造云端Docker体验: 灵雀云五大新功能上线](http://www.alauda.cn/2015/06/16/newfeature/)
