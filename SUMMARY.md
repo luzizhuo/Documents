@@ -39,6 +39,7 @@
    * [服务](api/services.md)
    * [实例](api/instances.md)
    * [镜像仓库](api/repository.md)
+   * [Web钩子](api/webhook.md)
    * [存储卷备份](api/backup.md)
 * [CLI命令文档](cli/introduce.md)
    * [登录](cli/login.md)
