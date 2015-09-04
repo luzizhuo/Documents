@@ -22,6 +22,7 @@
        * [构建镜像仓库详情](feature/image-building/warehouse-details.md)
        * [构建镜像列表](feature/image-building/list.md)
        * [构建镜像详情](feature/image-building/details.md)
+       * [Web钩子](feature/image-building/webhook.md)
    * [服务](feature/service/introduce.md)
        * [如何创建服务](feature/service/create.md)
        * [网络设置](feature/service/network-settings.md)
