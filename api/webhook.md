@@ -57,7 +57,7 @@
 [
     {
         "id": 4,
-        "subject": "chennanfei/docker_images_test",
+        "subject": "alaudadoc/docker_images_test",
         "subject_type": "build_repo",
         "events": [
             "build:complete"
@@ -66,7 +66,7 @@
         "secret": "123456",
         "url": "http://www.ucdream.com:8080/v1/builds",
         "is_active": true,
-        "created_by": "chennanfei",
+        "created_by": "alaudadoc",
         "created_at": "2015-08-27T09:53:43.563Z",
         "updated_at": "2015-08-27T09:53:43.566Z"
     },
@@ -86,7 +86,7 @@
 ```json
 {
     "id": 4,
-    "subject": "chennanfei/docker_images_test",
+    "subject": "alaudadoc/docker_images_test",
     "subject_type": "build_repo",
     "events": [
         "build:complete"
@@ -95,7 +95,7 @@
     "secret": "123456",
     "url": "http://www.ucdream.com:8080/v1/builds",
     "is_active": true,
-	"created_by": "chennanfei",
+	"created_by": "alaudadoc",
 	"created_at": "2015-08-27T09:53:43.563Z",
    	"updated_at": "2015-08-27T09:53:43.566Z"
 }
@@ -108,7 +108,7 @@
 ```json
 {
 	"events": ["build:complete"],
-	"secret": "chennanfei",
+	"secret": "alaudadoc",
 	"url": "http://www.ucdream.com:8080/v1/builds",
 	"name": "build hook",
 	"is_active": false
@@ -120,17 +120,17 @@
 ```json
 {
     "id": 4,
-    "subject": "chennanfei/docker_images_test",
+    "subject": "alaudadoc/docker_images_test",
     "subject_type": "build_repo",
     "events":
    	[
    	    "build:complete"
     ],
     "name": "build hook",
-    "secret": "chennanfei",
+    "secret": "alaudadoc",
     "url": "http://www.ucdream.com:8080/v1/builds",
     "is_active": true,
-    "created_by": "chennanfei",
+    "created_by": "alaudadoc",
     "created_at": "2015-08-27T09:53:43.563Z",
     "updated_at": "2015-08-27T10:02:42.436Z"
 }
