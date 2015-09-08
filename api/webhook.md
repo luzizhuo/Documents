@@ -64,7 +64,7 @@
         ],
         "name": "test hook",
         "secret": "123456",
-        "url": "http://www.ucdream.com:8080/v1/builds",
+        "url": "http://www.example.com:8080/v1/builds",
         "is_active": true,
         "created_by": "alaudadoc",
         "created_at": "2015-08-27T09:53:43.563Z",
@@ -93,7 +93,7 @@
     ],
     "name": "test hook",
     "secret": "123456",
-    "url": "http://www.ucdream.com:8080/v1/builds",
+    "url": "http://www.example.com:8080/v1/builds",
     "is_active": true,
 	"created_by": "alaudadoc",
 	"created_at": "2015-08-27T09:53:43.563Z",
@@ -109,7 +109,7 @@
 {
 	"events": ["build:complete"],
 	"secret": "alaudadoc",
-	"url": "http://www.ucdream.com:8080/v1/builds",
+	"url": "http://www.example.com:8080/v1/builds",
 	"name": "build hook",
 	"is_active": false
 }
