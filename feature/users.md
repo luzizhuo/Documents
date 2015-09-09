@@ -17,4 +17,4 @@
 * 您的剩余金额：表示您当前账户的余额，余额不足时可以点击充值链接跳转到充值页面进行充值；
   ![](../images/feature/users/user-3.png)
 * 代码仓库源：目前我们支持两个主流的代码仓库源 － GitHub 和Bitbucket，未来我们会支持更多国内的代码仓库源。可以通过点击关联或取消关联，来管理您的是否连接代码仓库源。
-  ![](../images/feature/uers/user-4.png)
+  ![](../images/feature/users/user-4.png)
