@@ -10,7 +10,9 @@
 
 需要注意的是：只有在该服务拥有一个http-endpoint的端口映射类型时，才能设置用户域名，关于端口映射类型，请参考后面的段落。同时为了能够顺利访问用户自定义的域名，用户需要到域名服务商处给这个域名添加一个指向服务默认域名的CNAME记录，同时用户域名需要用户自己按照国家有关规定进行备案。
 
-例如，用户tom使用镜像alauda/hello-world创建了一个名为hello的服务，系统给该服务默认生成的域名是hello-world-tom.alaudacn.me。假设用户在某个域名服务商处申请了一个www.tom.cn的域名，并希望可以通过www.tom.cn访问这个hello服务。那么可以在“用户域名”处填入“www.tom.cn”。同时在域名服务商处给www.tom.cn添加一个指向hello-world-tom.myalauda.cn的CNAME记录。这样无论是访问`http://www.tom.cn` 还是访问 `http://hello-world-tom.alaudacn.me`， 都能够访问到这个hello-world服务。
+例如，用户tom使用镜像`alauda/hello-world`创建了一个名为hello的服务，系统给该服务默认生成的域名是`hello-world-tom.alaudacn.me`。假设用户在某个域名服务商处申请了一个www.tom.cn的域名，并希望可以通过www.tom.cn访问这个hello服务。那么可以在“用户域名”处填入“www.tom.cn”。同时在域名服务商处给`www.tom.cn`添加一个指向`hello-world-tom.myalauda.cn`的CNAME记录。这样无论是访问`http://www.tom.cn` 还是访问 `http://hello-world-tom.alaudacn.me`， 都能够访问到这个hello-world服务。
+
+需要注意的是,灵雀云暂时不支持泛域名解析。
 
 ## 端口映射和服务地址
 
