@@ -7,7 +7,7 @@
 
 **请求示例**:
 ```json
-$ curl -H "Authorization: Basic basic_auth" -H "Content-Type: multipart/form-data; boundary=simple boundary" -F "app_name=test" -F "region=BEIJING12" -F "services=@docker-compose.yml" 'https://api.alauda.cn/v1/applications/madams/'
+$ curl -H "Authorization:Token your-token" -H "Content-Type: multipart/form-data; boundary=simple boundary" -F "app_name=test" -F "region=BEIJING12" -F "services=@docker-compose.yml" 'https://api.alauda.cn/v1/applications/madams/'
 ```
 
 
