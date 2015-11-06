@@ -38,6 +38,7 @@
 * [API文档](api/introduce.md)
    * [用户](api/users.md)
    * [服务](api/services.md)
+   * [应用](api/applications.md)
    * [实例](api/instances.md)
    * [镜像仓库](api/repository.md)
    * [Web钩子](api/webhook.md)

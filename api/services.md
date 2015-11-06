@@ -6,6 +6,7 @@
 {
     "service_name": "test",
     "namespace": "madams",
+    "application": "app_name_or_null",
     "image_name": "index.alauda.cn/alauda/ubuntu",
     "image_tag": "latest",
     "run_command": "",
@@ -77,6 +78,7 @@
 * **instance_ports**: 端口设置
 * **autoscaling_config**: 当选择自动调节模式时的参数配置
 * **volumes**: 存储卷
+* **application**: 所属应用名称
 
 
 ## 服务列表
