@@ -57,7 +57,11 @@
             "volume_type" : "EBS",
             "size_gb" : 20
         }
-    ]
+    ],
+    "region": {
+        "IaaS": "AWS",
+        "name": "BEIJING1"
+    }
 }
 ```
 
@@ -79,6 +83,7 @@
 * **autoscaling_config**: 当选择自动调节模式时的参数配置
 * **volumes**: 存储卷
 * **application**: 所属应用名称
+* **region_name**: 所属区。可选值:[`BEIJING1`,`BEIJING2`,`HONGKONG1`,`SHANGHAI1`]分别对应:[`北京一区`,`北京二区`,`香港一区`,`上海一区`]
 
 
 ## 服务列表
@@ -130,6 +135,10 @@
                     "uuid": "92d03b63-e34b-11e4-9fa4-0240eaf5c02d"
                 }
             ],
+            "region": {
+				"IaaS": "AWS",
+				"name": "BEIJING1"
+			},
             "created_at": "2015-04-14T09:46:39.457Z",
             "volumes": [],
             "default_domain_name": "test-madams.alaudacn.me",
@@ -173,6 +182,10 @@
                     "uuid": "dcdaadc3-82a6-4ec1-9baa-58f35713626"
                 }
             ],
+            "region": {
+				"IaaS": "AWS",
+				"name": "HONGKONG1"
+			},
             "created_at": "2015-04-14T09:47:09.623Z",
             "volumes": [
                 {
@@ -248,6 +261,10 @@
             "uuid": "dcdaadc3-82a6-4ec1-9baa-58f35713626"
         }
     ],
+    "region": {
+        "IaaS": "AWS",
+        "name": "BEIJING1"
+	},
     "created_at": "2015-04-14T09:46:39.457Z",
     "volumes": [],
     "default_domain_name": "test-madams.alaudacn.me",
