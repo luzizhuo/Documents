@@ -58,10 +58,7 @@
             "size_gb" : 20
         }
     ],
-    "region": {
-        "IaaS": "AWS",
-        "name": "BEIJING1"
-    }
+    "region_name": "SHANGHAI1"
 }
 ```
 
