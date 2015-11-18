@@ -25,6 +25,7 @@
    * [服务](feature/service/introduce.md)
        * [如何创建服务](feature/service/create.md)
        * [网络设置](feature/service/network-settings.md)
+       * [专属IP与泛域名解析](feature/service/reservedip.md)
        * [服务列表](feature/service/list.md)
        * [服务详情](feature/service/details.md)
        * [无状态服务vs有状态服务](feature/service/stateless-service-and-stateful-service.md)
