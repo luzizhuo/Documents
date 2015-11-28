@@ -160,6 +160,12 @@
 ]
 ```
 
+## 删除 Tag
+
+`DELETE /v1/repositories/(namespace)/(repo-name)/tags/(tag)`
+
+删除某个镜像仓库下的某个`Tag`
+
 
 ## 删除镜像源
 
