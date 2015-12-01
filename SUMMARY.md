@@ -42,6 +42,7 @@
    * [应用](api/applications.md)
    * [实例](api/instances.md)
    * [镜像仓库](api/repository.md)
+   * [镜像构建](api/build.md)
    * [Web钩子](api/webhook.md)
    * [存储卷备份](api/backup.md)
 * [CLI命令文档](cli/introduce.md)
