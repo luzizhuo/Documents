@@ -5,3 +5,5 @@
 英文版:
 
 [http://docs.alauda.io/](http://docs.alauda.io/)
+
+Winter is coming ~
