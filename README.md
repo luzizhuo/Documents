@@ -1,4 +1,4 @@
-# 灵雀云用户向导
+# 灵雀云用户文档
 
 [http://docs.alauda.cn/](http://docs.alauda.cn/)
 
