@@ -46,6 +46,7 @@
    * [服务](api/services.md)
    * [应用](api/applications.md)
    * [实例](api/instances.md)
+   * [任务](api/job.md)
    * [镜像仓库](api/repository.md)
    * [镜像构建](api/build.md)
    * [Web钩子](api/webhook.md)

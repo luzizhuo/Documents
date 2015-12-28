@@ -15,11 +15,11 @@
 
 **参数说明**
 
-- **subject_type**：可以选build_repo（镜像构建仓库）、image_repo（镜像仓库）
+- **subject_type**：可选build_repo（镜像构建仓库）、image_repo（镜像仓库）、job（任务）
 
-- **subject**：镜像（构建）仓库的短路经（由命名空间和仓库名组成）
+- **subject**：若为镜像（构建）仓库，请使用短路经（由命名空间和仓库名组成）；若为任务，请使用任务ID
 
-- **events**：事件集合
+- **events**：事件集合。build_repo支持事件build:complete；image_repo支持事件image:push；job支持事件job:succeed、job:fail。
 
 - **secret**：密钥，用作计算数字签名
 
@@ -31,8 +31,8 @@
 
 ```json
 {
-	"id": 4,
-	"subject": "alaudauser/build_image_demo",
+    "id": 4,
+    "subject": "alaudauser/build_image_demo",
     "subject_type": "build_repo",
     "events": [
         "build:complete"
