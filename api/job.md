@@ -173,6 +173,7 @@
 
 ##删除任务
 `DELETE /v1/jobs/(job_id)`
+
 **返回结果示例（status code：204）**
 
 ##触发任务执行
