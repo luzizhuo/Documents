@@ -277,6 +277,7 @@
     "runtime_vars": "{\"DB_HOST\": \"127.0.0.1\"}"
   },
   "docker_image_tag": "trusty",
+}
 ```
 
 ##删除任务执行记录
