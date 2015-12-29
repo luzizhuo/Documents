@@ -15,7 +15,7 @@ $ curl -H "Authorization:Token your-token" -H "Content-Type: multipart/form-data
 
 * **app_name**: - 应用名称，在每个用户创建的应用中必须唯一。
 * **namespace**: 应用所属用户名或机构名
-* **region**:应用所属区，有BEIJING1, BEIJING2, SHANGHAI1, HONGKONG1
+* **region**:应用所属区，有`BEIJING1`,`SHANGHAI1`, `HONGKONG1`
 * **services** 应用的编排文件
 
 
