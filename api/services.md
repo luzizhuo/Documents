@@ -69,10 +69,10 @@
 * **run_command**: 运行docker时执行的命令
 * **image_name** 服务使用的镜像
 * **image_tag** 服务使用的镜像版本
-* **instance_size**: 容器实例大小，可选项为：“XS”，“S”，“M”，“L”，“XL”
-* **scaling_mode**: 调节模式，只对无状态服务有效。可选项为：“MANUAL”，“AUTO”
-* **target_state**: 服务创建后的目标状态，可选项为：“STARTED”，“STOPPED”
-* **custom_domain_name**: 用户自定义的域名，目前能设置一个域名，如“www.myname.com”
+* **instance_size**: 容器实例大小，可选项为：`XS`，`S`，`M`，`L`，`XL`
+* **scaling_mode**: 调节模式，只对无状态服务有效。可选项为：`MANUAL`，`AUTO`
+* **target_state**: 服务创建后的目标状态，可选项为：`STARTED`，`STOPPED`
+* **custom_domain_name**: 用户自定义的域名，目前能设置一个域名，如`www.myname.com`
 * **linked_to_apps** 该服务要连接的其它服务
 * **target_num_instances**: 服务的实例数量
 * **instance_envvars**: 环境变量
