@@ -39,7 +39,7 @@
 - **is_public** 是否为公有的镜像构建仓库
 - **code_repo_client** 可选择`GitHub`, `Bitbucket`, `OSChina`, `GitCafe`, `Simple`
 	若选择Simple, build config 需为:
-
+```
 	"build_config": {
         "code_repo_client": "Simple",
         "code_repo_clone_url": "http://github.com/example/example.git",
@@ -54,7 +54,7 @@
             }
         ]
     }
-    
+```
 - **code_repo_namespace** 代码仓库源的用户或组名
 - **code_repo_name** 对应选择的代码仓库源的项目名称
 - **code_repo_type** 为branch或tag
